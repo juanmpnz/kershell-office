@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1322" />
+    <title>Kershell Office · Boceto Fase 0</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">K</span>
+          <div><strong>KERSHELL</strong><small>OFFICE / PROTOTIPO</small></div>
+        </div>
+        <span class="demo-badge">DATOS DE EJEMPLO · SIN OPERACIÓN REAL</span>
+        <nav aria-label="Navegación principal">
+          <button class="nav-button active" data-view="office">Oficina</button>
+          <button class="nav-button" data-view="pending">
+            Pendientes <span class="count">2</span>
+          </button>
+          <button class="nav-button" data-view="settings">Configuración</button>
+        </nav>
+      </header>
+
+      <main>
+        <section
+          id="office-view"
+          class="office-view"
+          aria-label="Oficina de equipos"
+        >
+          <div class="scene-heading">
+            <div>
+              <span class="eyebrow">CENTRO DE OPERACIONES / 00</span>
+              <h1>Tu oficina, de un vistazo.</h1>
+              <p>Seleccioná un equipo para ver su trabajo y conversar.</p>
+            </div>
+            <div
+              class="scene-actions"
+              role="group"
+              aria-label="Vista de oficina"
+            >
+              <button id="concept-a" class="seg active" aria-pressed="true">
+                Vista espacial
+              </button>
+              <button id="concept-b" class="seg" aria-pressed="false">
+                Plano cenital
+              </button>
+              <button id="list-toggle" class="seg" aria-pressed="false">
+                Lista accesible
+              </button>
+            </div>
+          </div>
+          <div class="workspace">
+            <div class="scene-wrap" id="scene-wrap">
+              <canvas id="scene" aria-hidden="true"></canvas>
+              <div
+                class="scene-grid"
+                id="scene-buttons"
+                aria-label="Mesas de equipos"
+              ></div>
+              <div class="scene-footer">
+                <span><i class="live-dot"></i> Vista de prueba</span
+                ><span id="scene-metric">Cargando escena…</span>
+              </div>
+            </div>
+            <div id="team-list" class="team-list" hidden></div>
+            <aside
+              class="team-panel"
+              id="team-panel"
+              aria-label="Detalle del equipo"
+            >
+              <div class="panel-empty">
+                <span class="empty-symbol">✳</span>
+                <h2>Elegí una mesa</h2>
+                <p>
+                  El trabajo de cada equipo aparece aquí, junto a sus resultados
+                  y conversación.
+                </p>
+              </div>
+            </aside>
+          </div>
+          <p class="prototype-note">
+            Prototipo visual: los estados y mensajes de esta pantalla son
+            sintéticos. Ningún botón ejecuta acciones reales.
+          </p>
+        </section>
+
+        <section id="pending-view" class="subpage" hidden>
+          <span class="eyebrow">BANDEJA / 02</span>
+          <h1>Pendientes</h1>
+          <p>Decisiones que necesitan tu atención.</p>
+          <div class="cards">
+            <article>
+              <span class="pill amber">Necesita tu respuesta</span>
+              <h2>Confirmar prioridad de Ediflow</h2>
+              <p>Desarrollo espera la elección entre filtros y exportación.</p>
+              <button class="text-button" data-open-team="development">
+                Ver equipo →
+              </button>
+            </article>
+            <article>
+              <span class="pill blue">Para revisar</span>
+              <h2>Evaluación de mercado</h2>
+              <p>Investigación dejó una ficha de oportunidad de ejemplo.</p>
+              <button class="text-button" data-open-team="research">
+                Ver equipo →
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <section id="settings-view" class="subpage" hidden>
+          <span class="eyebrow">SISTEMA / CONFIGURACIÓN</span>
+          <h1>Configuración</h1>
+          <p>Conexiones y límites de esta oficina.</p>
+          <div class="cards">
+            <article>
+              <span class="pill neutral">Sin conectar</span>
+              <h2>Proveedor de IA</h2>
+              <p>La prueba visual no tiene acceso a un proveedor.</p>
+            </article>
+            <article>
+              <span class="pill neutral">Sin conectar</span>
+              <h2>Proyectos y repositorios</h2>
+              <p>Las tareas mostradas son datos de ejemplo.</p>
+            </article>
+            <article>
+              <span class="pill neutral">Sin configurar</span>
+              <h2>Presupuesto y permisos</h2>
+              <p>Se definirán antes de habilitar trabajo real.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
