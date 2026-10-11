@@ -4,7 +4,7 @@ Oficina interna 3D para dirigir los proyectos, equipos de agentes e investigaci�
 
 ## Estado — 11 de octubre de 2026
 
-Plan de desarrollo y documentación fundacional. La aplicación, los agentes operativos y las conexiones todavía no están implementados. Esta entrega no activa investigaciones programadas ni conecta cuentas o servidores.
+Fase 0 en curso: perfiles y skills de construcción, boceto 3D navegable y pruebas locales acotadas de los motores. La aplicación operativa, los agentes de la oficina y las conexiones todavía no están implementados. No se activan investigaciones programadas ni se conectan cuentas o servidores de Kershell.
 
 ## Empezar aquí
 
@@ -28,7 +28,7 @@ Plan de desarrollo y documentación fundacional. La aplicación, los agentes ope
 
 ## Desarrollo
 
-El primer trabajo ejecutable es `F0-01` en la lista de tareas. Las pruebas técnicas de Fase 0 resuelven el motor y el runner antes de instalar la base de la aplicación. No existen aún comandos de instalación, desarrollo, pruebas o compilación: se crearán y documentarán en `F1-01`.
+La [lista de tareas](tasks/todo.md) y los [informes de Fase 0](docs/reports/) muestran avance y límites. Los comandos del boceto están en [su README](packages/office-scene/README.md); los de la aplicación se crearán en F1-01. Las pruebas técnicas de Fase 0 resuelven el motor y el runner antes de instalar la base de la aplicación.
 
 La propuesta usa una aplicación web propia y ejecución aislada en servidor, con evaluación temprana de Paperclip. La experiencia 3D se desarrolla desde el primer recorrido funcional. Elegir una biblioteca o registrar un perfil no significa tener un empleado operativo.
 

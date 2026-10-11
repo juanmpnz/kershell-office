@@ -1,6 +1,6 @@
 # Tareas de desarrollo — Kershell Office
 
-Estado inicial: **38 tareas pendientes**. Ninguna integración ni tarea de desarrollo está terminada por existir este plan. El orden por fases representa hitos, no obliga a ejecutar trabajo independiente en una única cadena. Referencias: [plan](plan.md), [arquitectura](../docs/architecture.md), [agentes](../docs/agents.md), [harness](../docs/harness.md), [integraciones](../docs/integrations.md), [investigación](../docs/research.md) y [calidad](../docs/quality-and-operations.md).
+Estado: **38 IDs abiertos**. La Fase 0 está en curso; las pruebas parciales no cierran tareas ni el gate G0. El orden por fases representa hitos, no obliga a ejecutar trabajo independiente en una única cadena. Referencias: [plan](plan.md), [arquitectura](../docs/architecture.md), [agentes](../docs/agents.md), [harness](../docs/harness.md), [integraciones](../docs/integrations.md), [investigación](../docs/research.md) y [calidad](../docs/quality-and-operations.md).
 
 ## Reglas de ejecución
 
@@ -17,7 +17,7 @@ Estado inicial: **38 tareas pendientes**. Ninguna integración ni tarea de desar
 
 ### F0-01 — Harness, perfiles y skills del equipo constructor
 
-- [ ] Pendiente.
+- [ ] En curso. Perfiles y skills escritos y validados estáticamente; falta invocación efectiva del subagente y revisión. Evidencia: `docs/reports/f0-01-harness.md`.
 - **Objetivo:** convertir el harness especificado en configuración soportada, con responsabilidades y procedimientos invocables.
 - **Responsable / revisor:** Principal Engineer / QA y Security.
 - **Dependencias:** ninguna; leer la documentación fundacional primero.
@@ -28,7 +28,7 @@ Estado inicial: **38 tareas pendientes**. Ninguna integración ni tarea de desar
 
 ### F0-02 — Spike de Codex, autenticación y continuidad
 
-- [ ] Pendiente.
+- [ ] En curso. Identidad y CLI verificadas; faltan tarea de código, interrupción/reanudación y coste medible. Evidencia: `docs/reports/f0-02-codex-spike.md`.
 - **Objetivo:** probar el recorrido mínimo del runtime candidato antes de seleccionar una integración.
 - **Responsable / revisor:** Backend/Agent Systems / Principal Engineer y Security.
 - **Dependencias:** F0-01.
@@ -39,7 +39,7 @@ Estado inicial: **38 tareas pendientes**. Ninguna integración ni tarea de desar
 
 ### F0-03 — Comparar Paperclip y coordinador mínimo
 
-- [ ] Pendiente.
+- [ ] Análisis preliminar sin cerrar la dependencia F0-02. Instancia Paperclip y fixture del coordinador probados sin modelo; falta comparación con runner real y revisión. Evidencia: `docs/reports/f0-03-orchestrator-spike.md`.
 - **Objetivo:** elegir qué reutilizar mediante el mismo recorrido y controles, sin construir dos plataformas completas.
 - **Responsable / revisor:** Principal Engineer / Backend, QA y Security.
 - **Dependencias:** F0-02.
@@ -61,7 +61,7 @@ Estado inicial: **38 tareas pendientes**. Ninguna integración ni tarea de desar
 
 ### F0-05 — Boceto navegable de oficina 3D y panel
 
-- [ ] Pendiente.
+- [ ] En curso. Dos vistas y recorridos en navegador probados; falta revisión de Juan/QA y medición en equipo piloto definitivo. Evidencia: `docs/reports/f0-05-visual-spike.md`.
 - **Objetivo:** fijar una dirección visual simple que permita encontrar equipos, conversar y revisar trabajo.
 - **Responsable / revisor:** UX/UI y Frontend 3D / Product Lead, QA y Juan.
 - **Dependencias:** F0-01.
