@@ -1,0 +1,27 @@
+# Copy into a private CODEX_HOME for the macOS G0 shell-boundary experiment.
+default_permissions = "g0_runner"
+
+[features]
+apps = false
+browser_use = false
+computer_use = false
+
+[permissions]
+
+[permissions.g0_runner]
+description = "G0 fixture: write only the isolated checkout; no network for local commands"
+extends = ":workspace"
+
+[permissions.g0_runner.filesystem]
+":root" = "deny"
+":minimal" = "read"
+":tmpdir" = "deny"
+":slash_tmp" = "deny"
+
+[permissions.g0_runner.filesystem.":workspace_roots"]
+"." = "write"
+"**/.env" = "deny"
+"**/.env.*" = "deny"
+
+[permissions.g0_runner.network]
+enabled = false

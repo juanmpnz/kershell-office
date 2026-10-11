@@ -1,6 +1,6 @@
 # Tareas de desarrollo — Kershell Office
 
-Estado: **38 IDs abiertos**. La Fase 0 está en curso; las pruebas parciales no cierran tareas ni el gate G0. El orden por fases representa hitos, no obliga a ejecutar trabajo independiente en una única cadena. Referencias: [plan](plan.md), [arquitectura](../docs/architecture.md), [agentes](../docs/agents.md), [harness](../docs/harness.md), [integraciones](../docs/integrations.md), [investigación](../docs/research.md) y [calidad](../docs/quality-and-operations.md).
+Estado: **37 IDs abiertos**. F0-05 se cerró como prototipo visual; los otros cinco IDs de Fase 0 y G0 siguen abiertos. El orden por fases representa hitos, no obliga a ejecutar trabajo independiente en una única cadena. Referencias: [plan](plan.md), [arquitectura](../docs/architecture.md), [agentes](../docs/agents.md), [harness](../docs/harness.md), [integraciones](../docs/integrations.md), [investigación](../docs/research.md) y [calidad](../docs/quality-and-operations.md).
 
 ## Reglas de ejecución
 
@@ -28,7 +28,7 @@ Estado: **38 IDs abiertos**. La Fase 0 está en curso; las pruebas parciales no 
 
 ### F0-02 — Spike de Codex, autenticación y continuidad
 
-- [ ] En curso. Identidad y CLI verificadas; faltan tarea de código, interrupción/reanudación y coste medible. Evidencia: `docs/reports/f0-02-codex-spike.md`.
+- [ ] En curso. Identidad, tarea de código en copia aislada e interrupción/reanudación de CLI verificadas; faltan recuperación de worker y control monetario aplicable. Evidencia: `docs/reports/f0-02-codex-spike.md`.
 - **Objetivo:** probar el recorrido mínimo del runtime candidato antes de seleccionar una integración.
 - **Responsable / revisor:** Backend/Agent Systems / Principal Engineer y Security.
 - **Dependencias:** F0-01.
@@ -50,7 +50,7 @@ Estado: **38 IDs abiertos**. La Fase 0 está en curso; las pruebas parciales no 
 
 ### F0-04 — Demostrar aislamiento y autoridad efectiva
 
-- [ ] Pendiente.
+- [ ] En curso. Perfil local denegó lecturas/escrituras externas y red en fixture; faltan gateway, rutas alternativas y continuidad bajo fallo. Evidencia: `docs/reports/f0-04-isolation-spike.md`.
 - **Objetivo:** comprobar que el runtime elegido no evade los controles ni accede a recursos ajenos.
 - **Responsable / revisor:** Security/DevOps / QA y Principal Engineer.
 - **Dependencias:** F0-02, F0-03.
@@ -61,7 +61,7 @@ Estado: **38 IDs abiertos**. La Fase 0 está en curso; las pruebas parciales no 
 
 ### F0-05 — Boceto navegable de oficina 3D y panel
 
-- [ ] En curso. Dos vistas y recorridos en navegador probados; falta revisión de Juan/QA y medición en equipo piloto definitivo. Evidencia: `docs/reports/f0-05-visual-spike.md`.
+- [x] Cerrado como prototipo. Juan eligió Spatial; QA revisó ambas vistas y el recorrido se repitió en el Mac/Chrome confirmado como equipo piloto. Evidencia: `docs/reports/f0-05-visual-spike.md`.
 - **Objetivo:** fijar una dirección visual simple que permita encontrar equipos, conversar y revisar trabajo.
 - **Responsable / revisor:** UX/UI y Frontend 3D / Product Lead, QA y Juan.
 - **Dependencias:** F0-01.

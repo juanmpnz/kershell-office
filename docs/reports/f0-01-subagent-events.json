@@ -1,0 +1,43 @@
+{
+  "codex_version": "0.162.1",
+  "records": [
+    {
+      "run": "subagents",
+      "thread_id": "01a12a99-8258-72b2-8c8a-5389eff8fed4",
+      "collab_calls": [
+        {
+          "tool": "wait",
+          "receiver_thread_ids": []
+        },
+        {
+          "tool": "wait",
+          "receiver_thread_ids": []
+        }
+      ],
+      "usage": {
+        "input_tokens": 103787,
+        "cached_input_tokens": 95232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 391,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "run": "subagents-v2",
+      "thread_id": "01a12aa4-d93f-7ba1-8415-b2ae71f10bde",
+      "collab_calls": [
+        {
+          "tool": "wait",
+          "receiver_thread_ids": []
+        }
+      ],
+      "usage": {
+        "input_tokens": 63431,
+        "cached_input_tokens": 55680,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 176,
+        "reasoning_output_tokens": 0
+      }
+    }
+  ]
+}

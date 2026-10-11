@@ -1,0 +1,122 @@
+{
+  "codex_version": "0.162.1",
+  "model": "gpt-6.1-sol",
+  "fixture": "temporary clone of kershell-office at 929840a",
+  "records": [
+    {
+      "run": "runner",
+      "thread_id": "01a12a9c-9704-7a62-a40d-bfa3cf02d77d",
+      "commands": [
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc 'curl --head --max-time 10 https://example.com'",
+          "exit_code": null
+        },
+        {
+          "event": "item.completed",
+          "command": "/bin/zsh -lc 'curl --head --max-time 10 https://example.com'",
+          "exit_code": 6
+        },
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc \"python3 -c 'from pathlib import Path; p=Path(\\\"g0-fixture/status.txt\\\"); s=p.read_text(); assert s.strip()==\\\"Pendiente\\\", \\\"Estado inicial inesperado\\\"; p.write_text(s.replace(\\\"Pendiente\\\", \\\"Listo\\\")); assert p.read_text().strip()==\\\"Listo\\\"; print(\\\"g0-fixture/status.txt: Pendiente → Listo; verificado\\\")'\"",
+          "exit_code": null
+        },
+        {
+          "event": "item.completed",
+          "command": "/bin/zsh -lc \"python3 -c 'from pathlib import Path; p=Path(\\\"g0-fixture/status.txt\\\"); s=p.read_text(); assert s.strip()==\\\"Pendiente\\\", \\\"Estado inicial inesperado\\\"; p.write_text(s.replace(\\\"Pendiente\\\", \\\"Listo\\\")); assert p.read_text().strip()==\\\"Listo\\\"; print(\\\"g0-fixture/status.txt: Pendiente → Listo; verificado\\\")'\"",
+          "exit_code": 1
+        },
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc 'state=$(<g0-fixture/status.txt)\nif [[ \"$state\" != Pendiente ]]; then exit 1; fi\nprintf '\"'Listo\\\\n' > g0-fixture/status.txt\n[[ \\\"\"'$(<g0-fixture/status.txt)\" == Listo ]] && printf '\"'Estado Listo verificado\\\\n'\"",
+          "exit_code": null
+        },
+        {
+          "event": "item.completed",
+          "command": "/bin/zsh -lc 'state=$(<g0-fixture/status.txt)\nif [[ \"$state\" != Pendiente ]]; then exit 1; fi\nprintf '\"'Listo\\\\n' > g0-fixture/status.txt\n[[ \\\"\"'$(<g0-fixture/status.txt)\" == Listo ]] && printf '\"'Estado Listo verificado\\\\n'\"",
+          "exit_code": 0
+        }
+      ],
+      "usage": {
+        "input_tokens": 109251,
+        "cached_input_tokens": 86144,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 494,
+        "reasoning_output_tokens": 0
+      },
+      "completed": true
+    },
+    {
+      "run": "interrupt",
+      "thread_id": "01a12a9d-86d9-74b1-a2cf-4aa0a19f7faa",
+      "commands": [
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc 'sleep 30'",
+          "exit_code": null
+        }
+      ],
+      "usage": null,
+      "completed": false
+    },
+    {
+      "run": "resume",
+      "thread_id": "01a12a9d-86d9-74b1-a2cf-4aa0a19f7faa",
+      "commands": [
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc \"python3 -c 'from pathlib import Path; p = Path(\\\"g0-fixture/interrupt.txt\\\"); s = p.read_text(); assert s.strip() == \\\"Pendiente\\\", \\\"Contenido inesperado\\\"; p.write_text(s.replace(\\\"Pendiente\\\", \\\"Listo\\\", 1)); assert p.read_text().strip() == \\\"Listo\\\"; print(p.read_text(), end=\\\"\\\")'\"",
+          "exit_code": null
+        },
+        {
+          "event": "item.completed",
+          "command": "/bin/zsh -lc \"python3 -c 'from pathlib import Path; p = Path(\\\"g0-fixture/interrupt.txt\\\"); s = p.read_text(); assert s.strip() == \\\"Pendiente\\\", \\\"Contenido inesperado\\\"; p.write_text(s.replace(\\\"Pendiente\\\", \\\"Listo\\\", 1)); assert p.read_text().strip() == \\\"Listo\\\"; print(p.read_text(), end=\\\"\\\")'\"",
+          "exit_code": 1
+        },
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc 'value=$(<g0-fixture/interrupt.txt)\nif [[ \"$value\" != Pendiente ]]; then\n  print -u2 '\"'Contenido inesperado; no se modificó el archivo'\n  exit 1\nfi\nprintf 'Listo\\\\n' > g0-fixture/interrupt.txt\ncat g0-fixture/interrupt.txt\n[[ \\\"\"'$(<g0-fixture/interrupt.txt)\" == Listo ]]'",
+          "exit_code": null
+        },
+        {
+          "event": "item.completed",
+          "command": "/bin/zsh -lc 'value=$(<g0-fixture/interrupt.txt)\nif [[ \"$value\" != Pendiente ]]; then\n  print -u2 '\"'Contenido inesperado; no se modificó el archivo'\n  exit 1\nfi\nprintf 'Listo\\\\n' > g0-fixture/interrupt.txt\ncat g0-fixture/interrupt.txt\n[[ \\\"\"'$(<g0-fixture/interrupt.txt)\" == Listo ]]'",
+          "exit_code": 0
+        }
+      ],
+      "usage": {
+        "input_tokens": 135853,
+        "cached_input_tokens": 111232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 540,
+        "reasoning_output_tokens": 0
+      },
+      "completed": true
+    },
+    {
+      "run": "isolated-runner",
+      "thread_id": "01a12a9f-cdd6-7c63-a69d-8878a5179a01",
+      "commands": [
+        {
+          "event": "item.started",
+          "command": "/bin/zsh -lc 'curl -m 2 -sS http://127.0.0.1:38941/ >/dev/null'",
+          "exit_code": null
+        },
+        {
+          "event": "item.completed",
+          "command": "/bin/zsh -lc 'curl -m 2 -sS http://127.0.0.1:38941/ >/dev/null'",
+          "exit_code": 7
+        }
+      ],
+      "usage": {
+        "input_tokens": 36172,
+        "cached_input_tokens": 17792,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 138,
+        "reasoning_output_tokens": 0
+      },
+      "completed": true
+    }
+  ]
+}
