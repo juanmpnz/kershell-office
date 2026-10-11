@@ -1,6 +1,6 @@
 # Harness del equipo constructor
 
-Estado: especificación fundacional. `AGENTS.md` ya sirve como entrada de contexto; perfiles ejecutables y skills se incorporan en F0-01 tras verificar la configuración soportada por la versión instalada de Codex.
+Estado: especificación y configuración inicial de F0-01. `AGENTS.md` sirve como entrada de contexto; seis perfiles y seis skills están en el repositorio, pero su uso operativo como subagentes permanece pendiente de prueba efectiva. Ver [informe F0-01](reports/f0-01-harness.md).
 
 ## Responsabilidades
 
